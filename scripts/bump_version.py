@@ -203,8 +203,9 @@ def _reconstitute_docs() -> None:
 
     ``docs/`` lives in a separate repo (``DocComplexGitSync``), one of
     several repos :data:`BOOTSTRAP_CGS_PATH` declares alongside this one
-    (``docs/``, ``.agent/.distant/.agentSpec/``, ``.agent/.local/.localSpec/``, ``.agent/.local/.claude/``) —
-    this call clones whichever of them are missing, not only ``docs/``.
+    (``docs/``, and every mount under ``.agent/.distant/`` and
+    ``.agent/.local/`` — ``AgentSkillsSplit``) — this call clones
+    whichever of them are missing, not only ``docs/``.
     ``--output-path ..`` only attaches the existing checkout as the tree
     root (rather than cloning a fresh one) when this repo's own directory
     is named ``ComplexGitSync`` — matching the ``.cgs``'s ``project_name`` —
