@@ -135,7 +135,7 @@ before-committing checklist — not a release step.
 
 The release register the owner asked for is the Ledger: a release is one
 ledger entry carrying an additive `release` field (`memory/ledger_entry.py`
-— see *The hash-chained register*, below, for the field's schema), written
+— see *The hash-chained ledger*, below, for the field's schema), written
 automatically by `ComplexGitSyncClient.freeze_release()` from the currently
 installed `__version__`/`__build__` and the release tag name the caller
 gave it. Tamper-evidence is then free: the field is inside the same hash
