@@ -7,4 +7,4 @@ ComplexGitSync's own release process: version, tag, ledger row. See
 release script it documents — the two only make sense kept together.
 
 This project's own, private and writable — mounts at
-`.agent/.local/release` (`AgentSkillsSplit`'s "release" skill).
+`.agent/.local/.versioning` (`AgentSkillsSplit`'s "release" skill).
