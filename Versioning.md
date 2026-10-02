@@ -1,3 +1,46 @@
+# Versioning — how this project numbers what it releases
+
+*Created: 2026-09-22*
+
+## Abstract — read this first
+
+**The one-line version.** ComplexGitSync carries two numbers: a SemVer
+that says what each release promises, and a build counter that says which
+build wrote a ledger entry. Every build bump is followed by a version
+bump, `patch` at least, and nothing automatic ever writes either.
+
+**What this document is.** The versioning rule for this project: what
+SemVer measures here, the two numbers and when each moves, who bumps
+what, the `bump-version` and `bump-build` commands, and the release
+register.
+
+**Why it exists.** A version is a promise to the people who use the
+tool, so moving it is a judgement a reader makes. The rule must be
+written down in one place, or agents follow whatever they assume, as they
+did until 2026-10-02.
+
+**What you will find.** The sections below, in that order.
+
+**Who it is for.** The worker who changes `src/`, the orchestrator who
+chooses the release level, and the owner.
+
+**What you need to do with it.** After any `bump-build`, run
+`bump-version` before calling the work done, then rebuild the PDFs and
+write the commit message with the new version.
+
+```mermaid
+graph LR
+    C["change to src/<br/>or to what a script does"] --> B["pixi run bump-build"]
+    B --> V["pixi run bump-version<br/>patch at least<br/>YOU ARE HERE"]
+    V --> P["rebuild docs PDFs"]
+    P --> M["commit message<br/>cgitsync&lt;new version&gt;"]
+
+    classDef here fill:#1565C0,color:#fff,stroke:#111,stroke-width:2px;
+    class V here;
+```
+
+---
+
 ## Versioning
 
 `DevSpecs.md`'s *Versioning* section leaves the choice between calendar
