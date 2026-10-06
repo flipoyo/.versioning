@@ -58,8 +58,9 @@ push — the general rule `DevSpecs.md`'s *Versioning* section and the
 ### What SemVer measures here
 
 SemVer's positions are defined against a public API, and this project
-already has one written down: README's *What is stable, and what is not*
-table.
+already has one written down: the user guide's *What is stable, and what
+is not* table (`docs/Text/user_guide.tex`, *What `cgitsync` promises a
+script*).
 
 | Position | Increments when | From the CLI contract |
 |---|---|---|

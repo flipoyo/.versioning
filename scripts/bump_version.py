@@ -16,7 +16,7 @@ The version is real SemVer (``MAJOR.MINOR.PATCH``, with an optional
 ``-<stage>.<N>`` pre-release suffix), read from ``pyproject.toml``. Unlike
 the old calendar scheme, there is no "next" version to compute
 automatically: MAJOR vs. MINOR vs. PATCH is a judgement about the CLI
-contract (README's *What is stable, and what is not*) that no diff can
+contract (the user guide's *What is stable, and what is not*) that no diff can
 make on its own, so the caller must say which one this is. See this
     skill's own ``Versioning.md``.
 
